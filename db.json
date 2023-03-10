@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "text": "севесталь",
+      "img": "https://pic.rutubelist.ru/user/1d/b4/1db45f7d3c68230632c6a1dabbe82ea5.jpg",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "text": "СЕВЕРСТАЛЬ",
+      "img": "https://krasnodar.stall-invest.ru/upload/iblock/c95/ikk3ibvwlg2afbxw75ing5y4fjolg2pw/Severstal2.jpg",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "text": "СевСталь",
+      "img": "https://www.finam.ru/Images/u/newsonline/202011/168.JPG",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}
