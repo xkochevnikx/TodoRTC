@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
 import cls from './TodoList.module.css';
-import { asyncAddTodo } from '../../store/asyncThunk/asyncAddTodo';
+import { asyncAddTodo } from '../../../store/asyncThunk/asyncAddTodo';
 import { useDispatch, useSelector } from 'react-redux';
-import MyButton from '../ui/MyButton/MyButton';
-import MyInput from '../ui/MyInput/MyInput';
-import TodoItem from '../TodoItem/TodoItem';
-import { asyncfetchTodos } from '../../store/asyncThunk/asyncFetchTodos';
+import MyButton from '../../ui/MyButton/MyButton';
+import MyInput from '../../ui/MyInput/MyInput';
+import TodoItem from '../../TodoItem/TodoItem';
+import { asyncfetchTodos } from '../../../store/asyncThunk/asyncFetchTodos';
 
-const TodoList = () => {
+export const TodoList = () => {
     const [text, setText] = useState('');
     const [img, setImg] = useState('');
 
-    const { status, error, editTodo } = useSelector((state) => state.todos);
-
-    console.log(editTodo);
+    const { status, error } = useSelector((state) => state.todos);
 
     const dispatch = useDispatch();
 
@@ -62,11 +60,9 @@ const TodoList = () => {
                     </MyButton>
                 </form>
             </div>
-            {status === 'loading' && <h2>Loading...</h2>}
-            {error && <h2>An error occured: {error} </h2>}
+            {status === 'loading' && <h2>загрузка...</h2>}
+            {error && <h2> ошибка : {error} </h2>}
             <TodoItem />
         </div>
     );
 };
-
-export default TodoList;

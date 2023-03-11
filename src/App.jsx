@@ -1,12 +1,12 @@
 import React from 'react';
-import TodoList from './components/pages/TodoList';
 import './App.css';
+import AppRouter from './components/routes/AppRouter';
 
 const App = () => {
     return (
-        <div>
-            <TodoList />
-        </div>
+        <>
+            <AppRouter />
+        </>
     );
 };
 

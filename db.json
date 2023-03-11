@@ -7,16 +7,22 @@
       "id": 1
     },
     {
-      "text": "СЕВЕРСТАЛЬ",
-      "img": "https://krasnodar.stall-invest.ru/upload/iblock/c95/ikk3ibvwlg2afbxw75ing5y4fjolg2pw/Severstal2.jpg",
-      "completed": true,
+      "text": "SEVERSTAL",
+      "img": "https://upload.wikimedia.org/wikipedia/fi/thumb/b/ba/Severstal_Tserepovets_logo.svg/1200px-Severstal_Tserepovets_logo.svg.png",
+      "completed": false,
       "id": 2
     },
     {
       "text": "СевСталь",
-      "img": "https://www.finam.ru/Images/u/newsonline/202011/168.JPG",
+      "img": "https://avatars.mds.yandex.net/i?id=9d45878b106819ceef2d09efa0b63180-4790390-images-thumbs&n=13",
       "completed": false,
       "id": 3
+    },
+    {
+      "text": "sevStal",
+      "img": "https://efns.ru/wp-content/uploads/00f71844e9cd2edaef95befb56ca5bd7.png",
+      "completed": false,
+      "id": 4
     }
   ]
 }

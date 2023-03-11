@@ -23,7 +23,6 @@ const todoSlice = createSlice({
         editTodo(state, action) {
             state.editTodo = action.payload;
         },
-
         todoCompleted(state, action) {
             const todoComp = state.todos.find((todo) => todo.id === action.payload);
             todoComp.completed = !todoComp.completed;

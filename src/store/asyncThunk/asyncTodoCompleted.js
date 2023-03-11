@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API } from '../../globalAPI';
 import { todoActions } from '../todoSlice';
 
 export const asyncTodoCompleted = createAsyncThunk(
@@ -8,7 +9,7 @@ export const asyncTodoCompleted = createAsyncThunk(
         const { completed } = thunkAPI.getState().todos.todos.find((todo) => todo.id === id);
 
         try {
-            await axios.patch(`http://localhost:8000/todos/${id}`, {
+            await axios.patch(`${API}/${id}`, {
                 completed: !completed,
             });
 

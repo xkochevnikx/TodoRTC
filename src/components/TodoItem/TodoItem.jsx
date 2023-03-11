@@ -1,12 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { asyncDeleteTodo } from '../../store/asyncThunk/asyncDeleteTodo';
-import { asyncEditTodo } from '../../store/asyncThunk/asyncEditTodo';
 import { asyncTodoCompleted } from '../../store/asyncThunk/asyncTodoCompleted';
 import cls from './TodoItem.module.css';
 
 const TodoItem = () => {
     const todos = useSelector((state) => state.todos.todos);
+
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
 
@@ -24,7 +26,7 @@ const TodoItem = () => {
                             />
                             <span
                                 className={cls.editTodoBtn}
-                                onClick={() => dispatch(asyncEditTodo(todo.id))}>
+                                onClick={() => navigate(`/edit/${todo.id}`)}>
                                 ✎
                             </span>
                             {todo.completed ? (
