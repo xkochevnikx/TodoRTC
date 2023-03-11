@@ -4,15 +4,13 @@ const MyInput = (props) => {
     const { placeholder, type, value, onChange } = props;
 
     return (
-        <>
-            <input
-                placeholder={placeholder}
-                type={type}
-                value={value}
-                onChange={onChange}
-                className={cls.myInput}
-            />
-        </>
+        <input
+            placeholder={placeholder}
+            type={type}
+            value={value}
+            onChange={onChange}
+            className={cls.myInput}
+        />
     );
 };
 

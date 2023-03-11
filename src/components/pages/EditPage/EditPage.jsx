@@ -8,6 +8,8 @@ import MyInput from '../../ui/MyInput/MyInput';
 import cls from './EditPage.module.css';
 
 export const EditPage = () => {
+    const { id } = useParams();
+
     useEffect(() => {
         dispatch(asyncEditTodo(id));
     }, []);
@@ -28,8 +30,6 @@ export const EditPage = () => {
 
     const navigate = useNavigate();
 
-    const { id } = useParams();
-
     function addEditTodo(e) {
         if (!editText.trim() || !editImg.trim()) {
             alert('Заполните все поля!');
@@ -47,28 +47,26 @@ export const EditPage = () => {
 
     return (
         <div className={cls.container}>
-            <div>
-                <form
-                    className={cls.formBox}
-                    action=''>
-                    <h2>Редактировать заметку</h2>
-                    <MyInput
-                        type='text'
-                        value={editText}
-                        onChange={(e) => setEditText(e.target.value)}
-                    />
-                    <MyInput
-                        type='url'
-                        value={editImg}
-                        onChange={(e) => setEditImg(e.target.value)}
-                    />
-                    <MyButton
-                        type='submit'
-                        onClick={addEditTodo}>
-                        Сохранить
-                    </MyButton>
-                </form>
-            </div>
+            <form
+                className={cls.formBox}
+                action=''>
+                <h2>Редактировать заметку</h2>
+                <MyInput
+                    type='text'
+                    value={editText}
+                    onChange={(e) => setEditText(e.target.value)}
+                />
+                <MyInput
+                    type='url'
+                    value={editImg}
+                    onChange={(e) => setEditImg(e.target.value)}
+                />
+                <MyButton
+                    type='submit'
+                    onClick={addEditTodo}>
+                    Сохранить
+                </MyButton>
+            </form>
         </div>
     );
 };

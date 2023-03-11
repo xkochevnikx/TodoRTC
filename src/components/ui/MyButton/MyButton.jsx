@@ -4,14 +4,12 @@ const MyButton = (props) => {
     const { children, type, onClick } = props;
 
     return (
-        <>
-            <button
-                className={cls.myBtn}
-                type={type}
-                onClick={onClick}>
-                {children}
-            </button>
-        </>
+        <button
+            className={cls.myBtn}
+            type={type}
+            onClick={onClick}>
+            {children}
+        </button>
     );
 };
 

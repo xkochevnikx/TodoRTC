@@ -37,29 +37,28 @@ export const TodoList = () => {
 
     return (
         <div className={cls.container}>
-            <div>
-                <form
-                    className={cls.formBox}
-                    action=''>
-                    <MyInput
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
-                        placeholder='ввести заметку'
-                        type='text'
-                    />
-                    <MyInput
-                        value={img}
-                        onChange={(e) => setImg(e.target.value)}
-                        placeholder='вставить картинку'
-                        type='url'
-                    />
-                    <MyButton
-                        type='submit'
-                        onClick={addBtnTodo}>
-                        Добавить
-                    </MyButton>
-                </form>
-            </div>
+            <form
+                className={cls.formBox}
+                action=''>
+                <MyInput
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    placeholder='ввести заметку'
+                    type='text'
+                />
+                <MyInput
+                    value={img}
+                    onChange={(e) => setImg(e.target.value)}
+                    placeholder='вставить картинку'
+                    type='url'
+                />
+                <MyButton
+                    type='submit'
+                    onClick={addBtnTodo}>
+                    Добавить
+                </MyButton>
+            </form>
+
             {status === 'loading' && <h2>загрузка...</h2>}
             {error && <h2> ошибка : {error} </h2>}
             <TodoItem />

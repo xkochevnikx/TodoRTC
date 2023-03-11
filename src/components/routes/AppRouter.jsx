@@ -4,17 +4,15 @@ import { routes } from './routes';
 
 const AppRouter = () => {
     return (
-        <>
-            <Routes>
-                {routes.map((route) => (
-                    <Route
-                        key={route.path}
-                        element={route.component}
-                        path={route.path}
-                    />
-                ))}
-            </Routes>
-        </>
+        <Routes>
+            {routes.map((route) => (
+                <Route
+                    key={route.path}
+                    element={route.component}
+                    path={route.path}
+                />
+            ))}
+        </Routes>
     );
 };
 
