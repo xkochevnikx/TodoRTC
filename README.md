@@ -9,6 +9,7 @@
 - Axios
 - Redux toolkit
 - Json-server
+- Css modules
 
 ### Интерфейс:
 Веб-приложение, без оптимизации для мобильных устройств.
