@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routes } from './routes';
 
+//todo - отрисовываем пути
 const AppRouter = () => {
     return (
         <Routes>

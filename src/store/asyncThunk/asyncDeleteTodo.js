@@ -3,6 +3,7 @@ import axios from 'axios';
 import { API } from '../../globalAPI';
 import { todoActions } from '../todoSlice';
 
+//todo - фанк удаления заметки, сначала удаляем объект на сервере, затем в редюсере передая в экшн id удаляемого объекта
 export const asyncDeleteTodo = createAsyncThunk(
     'todos/asyncDeleteTodo',
     async function (id, thunkAPI) {
